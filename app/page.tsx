@@ -72,31 +72,31 @@ export default function SatsterHome() {
           <Trust label="Verbal 680+" sub="เชี่ยวการการติวพาร์ท Verbal ให้ได้คะแนนสูง" />
           <Trust label="Math 800 เต็ม" sub="Roadmap สำหรับเก็บ Math เต็มชัดเจน" />
           <Trust label="1,200+ ข้อ" sub="โจทย์ฝึกจากแบบฝึกหัด และ ข้อสอบจริง" />
-          <Trust label="2020 – 2025" sub="สอน SAT มามากกว่า 5 ปี" />
+          <Trust label="2020 – 2026" sub="สอน SAT มามากกว่า 5 ปี" />
         </div>
       </section>
 
       {/* Courses */}
       <section id="courses" className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-2xl font-bold">Tutoring Rates 2025</h2>
+        <h2 className="text-2xl font-bold">Tutoring Rates 2026</h2>
         <p className="text-slate-600 mt-2">เรามีคอร์สให้น้องๆ เลือกทุกรูปแบบ ทั้ง Private, คลาสกลุ่ม, และ วีดีโอคอร์ส เข้าใจ กระชับ ตรงกับข้อสอบจริงแน่นอน</p>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <CourseCard
             title="Video Course ปรับพื้นฐาน 24 ชม."
-            price="฿3,900 / 2 Subjects"
+            price="฿5,900 / 2 Subjects"
             bullets={["คอร์สนี้เหมาะสำหรับน้องๆ ที่อยากเริ่มเรียนเนื้อหาตั้งแต่ต้น 😀","ปรับพื้นฐาน สอนเก็บเนื้อหาทั้งหมด ครบ 8 บทแบบละเอียด ครบทั้งสองวิชา","โจทย์มากกว่า 550+ ข้อ และ แบบฝึกหัดท้ายบทจากข้อสอบจริง🚀","ถาม-ตอบ 24 ชั่วโมง ติดตามผลนักเรียนจนสอบติด"]}
-            cta="Join Upscore Class"
+            cta="Join Fundamental Class"
           />
           <CourseCard
             featured
             title="Upscore Fundamental / Intensive"
-            price="฿9,900 / Course"
-            bullets={["คลาสสดกว่า 10+ คลาส / คอร์ส","เรียนสด small group ถามตอบได้ตลอด","โจทย์มากกว่า 500+ ข้อจากข้อสอบจริง","ถาม-ตอบ 24 ชั่วโมง ติดตามผลนักเรียนจนสอบติด"]}
+            price="฿9,990 / Course"
+            bullets={["คลาสสดและวีดีโอกว่า 10+ คลาส / คอร์ส","เรียนสด small group ถามตอบได้ตลอด","โจทย์มากกว่า 500+ ข้อจากข้อสอบจริง","ถาม-ตอบ 24 ชั่วโมง ติดตามผลนักเรียนจนสอบติด"]}
             cta="Join Upscore Class"
           />
           <CourseCard
             title="Private Tutoring"
-            price="฿18,900 / Course"
+            price="Inquire For Pricing"
             bullets={["เรียนสด 1‑on‑1 กับพี่แบรี่ผ่าน Google Meet","เหมาะกับทุกระดับ ตั้งแต่ไม่มีพื้นฐาน ไปจนถึงระดับ Advanced","ปรับเนื้อหาให้เข้ากับน้อง 100%","ถาม-ตอบ 24 ชม. ติดตามผลนักเรียนจนสอบติด","นักเรียนในคลาสไพรเวต อัตราการสอบติด 100%","รับจำนวนจำกัด จองคิวเรียนล่วงหน้า"]}
             cta="Enquire Private"
           />
