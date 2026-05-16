@@ -289,8 +289,8 @@ export default function SatsterHome() {
             <div className="font-semibold">Follow</div>
             <ul className="mt-2 space-y-2 text-sm text-slate-300">
               <li><a href="https://lin.ee/wkBcwoc" target="_blank" rel="noopener noreferrer" className="hover:underline">LINE</a></li>
-              <li><a href="#" className="hover:underline">Instagram</a></li>
-              <li><a href="#" className="hover:underline">YouTube</a></li>
+              <li><a href="https://www.instagram.com/satster_academy/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a></li>
+              <li><a href="https://www.youtube.com/@satster_academy" target="_blank" rel="noopener noreferrer" className="hover:underline">YouTube</a></li>
             </ul>
           </div>
         </div>
@@ -301,6 +301,19 @@ export default function SatsterHome() {
           </div>
         </div>
       </footer>
+
+      {/* Floating LINE button */}
+      <a
+        href="https://lin.ee/wkBcwoc"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-500 px-4 py-3 text-white font-semibold shadow-lg hover:bg-green-600 transition"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.037 2 11c0 2.812 1.388 5.328 3.57 7.012L4.5 22l4.23-2.197A10.8 10.8 0 0 0 12 20c5.523 0 10-4.037 10-9S17.523 2 12 2Z"/>
+        </svg>
+        LINE
+      </a>
     </main>
   );
 }
