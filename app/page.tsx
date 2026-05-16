@@ -157,7 +157,7 @@ export default function SatsterHome() {
     <h3 className="font-semibold">สมัครเรียน ติดต่อ Line Official / Email</h3>
     <p className="text-sm text-slate-600 mt-1">Message us and we’ll be in touch jaa!</p>
     <div className="mt-4 flex flex-wrap gap-3">
-      <a href="#" className="rounded-2xl px-4 py-2 bg-green-600 text-white font-medium shadow hover:bg-green-700">Add LINE</a>
+      <a href="https://lin.ee/wkBcwoc" target="_blank" rel="noopener noreferrer" className="rounded-2xl px-4 py-2 bg-green-600 text-white font-medium shadow hover:bg-green-700">Add LINE</a>
       <a href="mailto:berrysattutor@gmail.com" className="rounded-2xl px-4 py-2 bg-white border border-slate-200 font-medium">Email Us</a>
     </div>
   </div>
@@ -288,7 +288,7 @@ export default function SatsterHome() {
           <div>
             <div className="font-semibold">Follow</div>
             <ul className="mt-2 space-y-2 text-sm text-slate-300">
-              <li><a href="#" className="hover:underline">LINE</a></li>
+              <li><a href="https://lin.ee/wkBcwoc" target="_blank" rel="noopener noreferrer" className="hover:underline">LINE</a></li>
               <li><a href="#" className="hover:underline">Instagram</a></li>
               <li><a href="#" className="hover:underline">YouTube</a></li>
             </ul>
