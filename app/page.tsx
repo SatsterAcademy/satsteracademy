@@ -109,7 +109,7 @@ export default function SatsterHome() {
           <div className="text-center mb-10">
             <span className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 tracking-wide uppercase">Student Results</span>
             <h2 className="text-3xl font-extrabold text-slate-900">Reviews & Results จากน้องๆ คนเก่ง 💕</h2>
-            <p className="text-slate-500 mt-2 text-sm">ผลลัพธ์จริงจากนักเรียนของพี่แบรี่ — คะแนนขึ้นทุกคน</p>
+            <p className="text-slate-400 mt-2 text-base">ผลลัพธ์จริง คะแนนขึ้นทุกคน 🚀</p>
           </div>
           <ReviewImageSlider />
         </div>
@@ -355,59 +355,58 @@ function CourseCard({ title, price, bullets, cta, featured }: { title: string; p
 
 function ReviewImageSlider() {
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const images = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49];
+  const all = Array.from({ length: 49 }, (_, i) => i + 1);
+  // Split into 3 rows
+  const row1 = all.filter((_, i) => i % 3 === 0);
+  const row2 = all.filter((_, i) => i % 3 === 1);
+  const row3 = all.filter((_, i) => i % 3 === 2);
 
   function scrollByDir(dir: 1 | -1) {
     const el = containerRef.current;
     if (!el) return;
-    el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: 'smooth' });
+    el.scrollBy({ left: dir * 360, behavior: 'smooth' });
   }
+
+  const imgClass = "w-full block rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-white/60";
+  const colW = "w-[220px] shrink-0";
 
   return (
     <div className="relative">
       {/* Nav buttons */}
       <div className="flex justify-end gap-3 mb-5">
         <button onClick={() => scrollByDir(-1)} aria-label="Previous"
-          className="h-11 w-11 rounded-full bg-white border border-slate-200 shadow-md hover:shadow-lg hover:bg-blue-50 grid place-items-center text-slate-600 text-xl font-bold transition-all">
+          className="h-11 w-11 rounded-full bg-white border border-slate-200 shadow-md hover:bg-blue-50 hover:shadow-lg grid place-items-center text-slate-600 text-xl font-bold transition-all">
           ‹
         </button>
         <button onClick={() => scrollByDir(1)} aria-label="Next"
-          className="h-11 w-11 rounded-full bg-white border border-slate-200 shadow-md hover:shadow-lg hover:bg-blue-50 grid place-items-center text-slate-600 text-xl font-bold transition-all">
+          className="h-11 w-11 rounded-full bg-white border border-slate-200 shadow-md hover:bg-blue-50 hover:shadow-lg grid place-items-center text-slate-600 text-xl font-bold transition-all">
           ›
         </button>
       </div>
 
-      {/* Slider */}
+      {/* 3-row horizontal scroll grid */}
       <div
         ref={containerRef}
-        className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4"
+        className="overflow-x-auto pb-4"
         style={{ scrollbarWidth: 'none' as any }}
       >
-        {images.map((n) => (
-          <div
-            key={n}
-            className="snap-start shrink-0 w-[85%] sm:w-[55%] md:w-[36%] lg:w-[30%]"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200/60">
-              <img
-                src={`/images/reviews/${n}.jpg`}
-                alt={`Student result ${n}`}
-                className="w-full block"
-                loading="lazy"
-              />
-            </div>
+        <div className="flex flex-col gap-4" style={{ width: 'max-content' }}>
+          <div className="flex gap-4">
+            {row1.map(n => <div key={n} className={colW}><img src={`/images/reviews/${n}.jpg`} alt={`Review ${n}`} className={imgClass} loading="lazy" /></div>)}
           </div>
-        ))}
+          <div className="flex gap-4">
+            {row2.map(n => <div key={n} className={colW}><img src={`/images/reviews/${n}.jpg`} alt={`Review ${n}`} className={imgClass} loading="lazy" /></div>)}
+          </div>
+          <div className="flex gap-4">
+            {row3.map(n => <div key={n} className={colW}><img src={`/images/reviews/${n}.jpg`} alt={`Review ${n}`} className={imgClass} loading="lazy" /></div>)}
+          </div>
+        </div>
       </div>
 
       {/* Footer link */}
       <div className="mt-6 text-center">
-        <a
-          href="https://www.instagram.com/satster_academy/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
-        >
+        <a href="https://www.instagram.com/satster_academy/" target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           ดูรีวิวเพิ่มเติมที่ Instagram
         </a>
