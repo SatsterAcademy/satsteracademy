@@ -368,7 +368,7 @@ function ReviewImageSlider() {
   }
 
   const imgClass = "w-full block rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-white/60";
-  const colW = "w-[220px] shrink-0";
+  const colW = "w-[340px] shrink-0";
 
   return (
     <div className="relative">
