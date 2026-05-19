@@ -144,7 +144,7 @@ export default function SatsterHome() {
 <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between self-start">
   <div>
     <h3 className="font-semibold">สมัครเรียน ติดต่อ Line Official / Email</h3>
-    <p className="text-sm text-slate-600 mt-1">Message us and we’ll be in touch jaa!</p>
+    <p className="text-sm text-slate-600 mt-1">Message us and we'll be in touch jaa!</p>
     <div className="mt-4 flex flex-wrap gap-3">
       <a href="https://lin.ee/wkBcwoc" target="_blank" rel="noopener noreferrer" className="rounded-2xl px-4 py-2 bg-green-600 text-white font-medium shadow hover:bg-green-700">Add LINE</a>
       <a href="mailto:berrysattutor@gmail.com" className="rounded-2xl px-4 py-2 bg-white border border-slate-200 font-medium">Email Us</a>
@@ -362,36 +362,36 @@ function ReviewImageSlider() {
   }
 
   return (
-    <div className=”mt-6 relative”>
+    <div className="mt-6 relative">
       <div
         ref={containerRef}
-        className=”flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-2 px-1 pb-3”
+        className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-2 px-1 pb-3"
         style={{ scrollbarWidth: 'none' as any }}
       >
         {images.map((n) => (
           <div
             key={n}
-            className=”snap-start shrink-0 w-[78%] sm:w-[48%] md:w-[32%] lg:w-[23%]”
+            className="snap-start shrink-0 w-[78%] sm:w-[48%] md:w-[32%] lg:w-[23%]"
           >
             <img
               src={`/images/reviews/${n}.jpg`}
               alt={`Student result ${n}`}
-              className=”w-full rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200”
-              loading=”lazy”
+              className="w-full rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200"
+              loading="lazy"
             />
           </div>
         ))}
       </div>
 
-      <div className=”hidden md:flex absolute -top-12 right-0 gap-2”>
-        <button onClick={() => scrollByDir(-1)} aria-label=”Previous”
-          className=”h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center”>‹</button>
-        <button onClick={() => scrollByDir(1)} aria-label=”Next”
-          className=”h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center”>›</button>
+      <div className="hidden md:flex absolute -top-12 right-0 gap-2">
+        <button onClick={() => scrollByDir(-1)} aria-label="Previous"
+          className="h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center">‹</button>
+        <button onClick={() => scrollByDir(1)} aria-label="Next"
+          className="h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center">›</button>
       </div>
 
-      <p className=”mt-4 text-xs text-slate-400 text-right”>
-        <a href=”https://www.instagram.com/satster_academy/” target=”_blank” rel=”noopener noreferrer” className=”hover:text-blue-500 transition”>ดูรีวิวเพิ่มเติมที่ Instagram →</a>
+      <p className="mt-4 text-xs text-slate-400 text-right">
+        <a href="https://www.instagram.com/satster_academy/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition">ดูรีวิวเพิ่มเติมที่ Instagram →</a>
       </p>
     </div>
   );
