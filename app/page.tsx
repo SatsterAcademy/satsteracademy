@@ -107,19 +107,8 @@ export default function SatsterHome() {
       <section id="results" className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl font-bold">Reviews & Results จากน้องๆ คนเก่ง 💕💕💕</h2>
-          <TestimonialsSlider
-            items={[
-              { name: "Tangkwa • M6", quote: " P Barry สอนดีมากกกกก ใจดีสุดๆ จากเป็นคนที่อ่อนเลขมากก จนรู้สึกว่าหลังจากเรียนกับพี่แบรี่ เข้าใจอะไรเยอะมากก มีอะไรถามได้ตลอด สอนเข้าใจมาก แถมมม ที่เรียนมาตรงกับข้อสอบมากกก!!! anddd p Barry always supports and hai gum lung jaiii ta lorddd😊😊😊", before: 910, after: 1380 },
-              { name: "Pun • CMIS", quote: "เอาเป็นว่าแค่เดือนเดียวคะแนนเพิ่มมาเป็น 200+++ คะแนนเลย! พี่แบรี่สอนได้ get to the point มากๆ ครับ พาร์ท Verbal มีทริคที่ทำให้เข้าใจ passage ยาวๆ ทริค grammar ก็สอนตรงมากๆๆๆ พาร์ท Math พี่แบรี่สอนใช้ Desmos ครบ ทำให้ทำได้เร็วขึ้นๆ มากเลยครับ🚀 ", before: 1210, after: 1430 },
-              { name: "Jenis • King's College • Math", quote: "ขอบคุณมากค่า เลิฟๆๆ เลยยย พี่แบรี่สอนดีมาก แล้วก็ใจเย็นมากๆๆๆ อันไหนที่ไม่มั่นใจพี่ก็จะช่วยเอามาให้ทำเรื่อยๆ คะแนนขึ้นเยอะมาก ไม่ได้ expect ว่าจะขึ้นขนาดนี้เลยยย จาก 660 -> 740 ✨✨✨", before: 660, after: 740 },
-              { name: "Tiggy • SJC", quote: "สอนเข้าใจเคลียร์ดีมากค่ะ ไม่คิดว่าคะแนนจะเพิ่มไวขนาดนี้เจอที่เรียนในห้องสอบด้วยค่าาาา🥳🥳🥳🥳 ", before: 1210, after: 1410 },
-              { name: "GIM • Satit Prasarnmit", quote: "พี่เบอร์รี่สอนเข้าใจมากค่า ทำพาร์ทแกรมม่าได้เร็วขึ้น พาร์ทแมทก็สอนเข้าใจ ได้ฝึกใช้ desmos ด้วยค่ะ➕➖✖️➗😆", before: 1160, after: 1240 },
-              { name: "Phuping • RIS", quote: "พี่สอนละเอียดไปทีละสเต็ปดีค่าตาม pace ของเราเลยย และทีมมีสอนทริคของพาร์ท reading ให้ตอบเร็วขึ้น หรืออย่างน้อยก็ช่วยทำให้เราเข้าใจ text ได้ง่ายขึ้นเยอะะด้วย grammar ก็ช่วยทำให้เราแบบอ่านแล้วตอบได้เลย ทริคคือดี๊อะ ถ้าอยากรู้ว่า มีไรบ้างต้องมาลาเรียนเอง 😌🤭😯😉 ", before: 1120, after: 1260 },
-              { name: "Best • BCC • Math", quote: "ดีมากเลยครับ จากทำแมทไม่ค่อยได้ ทำได้มากขึ้นครับ ตอนแรกทำช้ามาก แต่พี่แบรี่สอนใช้ desmos ก็ทำได้เร็วขึ้นครับ🚀 ", before: 510, after: 740 },
-              { name: "Otto • Assumption", quote: "เรียนกับพี่แบรี่แล้วทำ grammar ได้คล่องขึ้น และ ตอนสอบ เจอคำศัพท์เหมือนที่เรียนในคลาสหลายข้อเลยครับ 🎉", before: 1210, after: 1410  },
-              { name: "Friend • PSM • Verbal", quote: "พี่แบรี่สอนดีมาก แบบไม่เข้าใจอะไรก็ถามได้ มีทริคดีๆ ทำให้ทำข้อสอบได้คะแนนเยอะขึ้น และทำเร็วขึ้น💕💕", before: 490, after: 610 },
-            ]}
-          />
+          <p className="text-slate-500 mt-1 text-sm">ผลลัพธ์จริงจากนักเรียนของพี่แบรี่</p>
+          <ReviewImageSlider />
         </div>
       </section>
 
@@ -361,51 +350,49 @@ function CourseCard({ title, price, bullets, cta, featured }: { title: string; p
   );
 }
 
-function Testimonial({ name, quote, before, after }: { name: string; quote: string; before: number; after: number }) {
-  return (
-    <figure className="rounded-2xl bg-white border border-slate-200 p-5 shadow-sm w-full h-full min-h-[240px] flex flex-col justify-between">
-      <blockquote className="text-slate-700 flex-1">“{quote}”</blockquote>
-      <figcaption className="mt-3 text-sm text-slate-500">
-        <span className="font-medium text-slate-700">{name}</span>
-        <span className="mx-2">•</span>
-        <span>Score {before} → {after}</span>
-      </figcaption>
-    </figure>
-  );
-}
-
-function TestimonialsSlider({ items }: { items: { name: string; quote: string; before: number; after: number }[] }) {
-  const [_, setTick] = React.useState(0);
+function ReviewImageSlider() {
   const containerRef = React.useRef<HTMLDivElement>(null);
+  // Odd-numbered images are the styled Canva result cards
+  const images = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49];
 
   function scrollByDir(dir: 1 | -1) {
     const el = containerRef.current;
     if (!el) return;
-    const amount = el.clientWidth * 0.9;
-    el.scrollBy({ left: dir * amount, behavior: 'smooth' });
-    setTick((t)=>t+1);
+    el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: 'smooth' });
   }
 
   return (
-    <div className="mt-6 relative">
+    <div className=”mt-6 relative”>
       <div
         ref={containerRef}
-        className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-px-4 px-1 pb-2"
-        style={{scrollbarWidth:'none' as any}}
+        className=”flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-2 px-1 pb-3”
+        style={{ scrollbarWidth: 'none' as any }}
       >
-        {items.map((t, i) => (
-          <div key={i} className="snap-start shrink-0 w-[88%] sm:w-[60%] md:w-[46%] lg:w-[32%]">
-            <Testimonial {...t} />
+        {images.map((n) => (
+          <div
+            key={n}
+            className=”snap-start shrink-0 w-[78%] sm:w-[48%] md:w-[32%] lg:w-[23%]”
+          >
+            <img
+              src={`/images/reviews/${n}.jpg`}
+              alt={`Student result ${n}`}
+              className=”w-full rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200”
+              loading=”lazy”
+            />
           </div>
         ))}
       </div>
 
-      <div className="hidden md:flex absolute -top-12 right-0 gap-2">
-        <button onClick={() => scrollByDir(-1)} aria-label="Previous"
-          className="h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center">‹</button>
-        <button onClick={() => scrollByDir(1)} aria-label="Next"
-          className="h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center">›</button>
+      <div className=”hidden md:flex absolute -top-12 right-0 gap-2”>
+        <button onClick={() => scrollByDir(-1)} aria-label=”Previous”
+          className=”h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center”>‹</button>
+        <button onClick={() => scrollByDir(1)} aria-label=”Next”
+          className=”h-9 w-9 rounded-full border border-slate-300 bg-white shadow hover:bg-slate-50 grid place-items-center”>›</button>
       </div>
+
+      <p className=”mt-4 text-xs text-slate-400 text-right”>
+        <a href=”https://www.instagram.com/satster_academy/” target=”_blank” rel=”noopener noreferrer” className=”hover:text-blue-500 transition”>ดูรีวิวเพิ่มเติมที่ Instagram →</a>
+      </p>
     </div>
   );
 }
