@@ -15,6 +15,7 @@ export default function SatsterHome() {
             <a href="#contact" className="hover:text-blue-600">Contact</a>
           </nav>
           <div className="flex items-center gap-2">
+            <a href="https://courses.satsteracademy.com" target="_blank" rel="noopener noreferrer" className="rounded-2xl px-4 py-2 border border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transition hidden sm:inline-block">เข้าเรียน</a>
             <a href="#book" className="rounded-2xl px-4 py-2 bg-blue-600 text-white font-medium shadow hover:bg-blue-700">Consultation with P'Berry</a>
           </div>
         </div>
