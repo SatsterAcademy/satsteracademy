@@ -84,14 +84,14 @@ export default function SatsterHome() {
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <CourseCard
             title="Video Course ปรับพื้นฐาน 24 ชม."
-            price="฿5,900 / 2 Subjects"
+            price="฿9,900 / 2 Subjects"
             bullets={["คอร์สนี้เหมาะสำหรับน้องๆ ที่อยากเริ่มเรียนเนื้อหาตั้งแต่ต้น 😀","ปรับพื้นฐาน สอนเก็บเนื้อหาทั้งหมด ครบ 8 บทแบบละเอียด ครบทั้งสองวิชา","โจทย์มากกว่า 550+ ข้อ และ แบบฝึกหัดท้ายบทจากข้อสอบจริง🚀","ถาม-ตอบ 24 ชั่วโมง ติดตามผลนักเรียนจนสอบติด"]}
             cta="Join Fundamental Class"
           />
           <CourseCard
             featured
             title="Upscore Fundamental / Intensive"
-            price="฿9,990 / Course"
+            price="฿18,900 / Course"
             bullets={["คลาสสดและวีดีโอกว่า 10+ คลาส / คอร์ส","เรียนสด small group ถามตอบได้ตลอด","โจทย์มากกว่า 500+ ข้อจากข้อสอบจริง","ถาม-ตอบ 24 ชั่วโมง ติดตามผลนักเรียนจนสอบติด"]}
             cta="Join Upscore Class"
           />
