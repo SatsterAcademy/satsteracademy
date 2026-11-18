@@ -7,7 +7,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Satster Academy | เรียน SAT กับ P'Berry BBACU SAT1550",
+  title: "Satster Academy | เรียน SAT กับ P'Berry BBACU SAT1560",
   description:
     "เรียน SAT แบบออนไลน์ กับติวเตอร์ที่มีประสบการณ์และความเชี่ยวชาญในการสอน SAT พร้อมเนื้อหาที่อัปเดตและตรงตามหลักสูตร",
   icons: {
